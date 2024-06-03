@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.2.22"
+  },
+  "name": "mazz_ticket_system",
+  "description": "This proposal outlines the development of an online \r ticketing system using TypeScript for type safety and a user-friendly Command Line \r Interface (CLI) for interaction. This system will cater to users looking for a \r convenient way to browse events, purchase tickets, and potentially manage their \r purchase history",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/figlet": "^1.5.8",
+    "@types/inquirer": "^9.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
