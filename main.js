@@ -127,14 +127,14 @@ async function handleBrowseEvents() {
                 console.log("--------------------------------------------------");
                 console.log(`Your flight would be ${random} hours long`);
                 console.log("---------------------------------------------------");
-                await select(); // Assuming select() takes origin and destination cities
+                await select();
             }
             const cityChoices = {
                 Pakistan: pakCitites,
                 China: chinaCities,
                 Germany: germanCities,
                 USA: usaCities,
-                "Saudi Arabia": saudiaCities,
+                'Saudi Arabia': saudiaCities,
             };
             if (country.from === "Pakistan") {
                 await selectOriginAndDestination(pakCitites, cityChoices);
@@ -242,7 +242,6 @@ async function handleSignIn() {
         },
     ]);
     if (signIn.choices === "User") {
-        // if(registeredUsers > 0 ){
         const login = await inquirer.prompt([
             {
                 type: "input",
@@ -274,7 +273,7 @@ async function handleSignIn() {
         }
         else {
             console.log(chalk.red("Login Failed!\nPlease check your username and password."));
-            await handleRegistration();
+            await main();
         }
     }
     else if (signIn.choices === "Admin") {
@@ -602,7 +601,7 @@ async function select() {
             if (login.name && login.credit) {
                 console.log("logged in successfully ");
             }
-            let myBalance = 10000;
+            let myBalance = 100000;
             console.log("**************************************************************");
             await console.log(`${chalk.green(`\n YOUR CURRENT BALANCE IS  '${myBalance}'$ \n`)}`);
             console.log("**************************************************************");

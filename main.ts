@@ -3,7 +3,6 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-
 let registeredUsers: any = []; // Array to store user information (name, email, number, password)
 async function main() {
   while (true) {
@@ -143,8 +142,9 @@ async function handleBrowseEvents() {
         console.log(`Your flight would be ${random} hours long`);
         console.log("---------------------------------------------------");
 
-        await select(); // Assuming select() takes origin and destination cities
+        await select();
       }
+
       const cityChoices = {
         Pakistan: pakCitites,
         China: chinaCities,
@@ -285,7 +285,6 @@ async function handleSignIn() {
     },
   ]);
   if (signIn.choices === "User") {
-    // if(registeredUsers > 0 ){
     const login = await inquirer.prompt([
       {
         type: "input",
@@ -322,7 +321,7 @@ async function handleSignIn() {
       console.log(
         chalk.red("Login Failed!\nPlease check your username and password.")
       );
-      await handleRegistration();
+      await main();
     }
   } else if (signIn.choices === "Admin") {
     const adminLogin = await inquirer.prompt([
@@ -689,7 +688,7 @@ async function select() {
         console.log("logged in successfully ");
       }
 
-      let myBalance: number = 10000;
+      let myBalance: number = 100000;
       console.log(
         "**************************************************************"
       );
